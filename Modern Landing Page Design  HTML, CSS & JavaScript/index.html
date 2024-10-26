@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <div class="nav">
+                <div class="nav-logo nav-item">
+                    <a href="#">JBY London</a>
+                </div>
+                <div class="nav-links nav-item">
+                    <a href="#">photographers</a>
+                    <a href="#">Directors</a>
+                    <a href="#">Clients</a>
+                    <a href="#">About us</a>
+                </div>
+                <div class="nav-cta nav-item">
+                    <a href="#">Connect with Us</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="bg-gradient">
+            <div class="rect">
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero">
+                <h1>*The Art <br>inspired <br>by your <br>story.</h1>
+                <div class="cta">
+                    <button>Write us a letter</button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptate. Nostrum ex ducimus reiciendis quis eius ea blanditiis quam perspiciatis?</p>
+            </div>
+        </div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        gsap.from(".nav-container", 2, {
+            opacity: 0,
+            y: -60,
+            ease: "power3.inOut",
+            delay: 0.5
+        })
+
+        gsap.from(".hero > *", 1, {
+            opacity: 0,
+            y: 60,
+            ease: "power3.inOut",
+            delay: 1,
+            stagger: {
+                amount: 0.5,
+            }
+        })
+
+        gsap.from(".blob", 2, {
+            scale: 0,
+            ease: "power3.inOut",
+            delay: 1.5,
+            stagger: {
+                amount: 0.5,
+            }
+        })
+
+        gsap.from(".bg-gradient", 1, {
+            scale: 0,
+            ease: "power3.inOut",
+            delay: 2,
+        })
+    </script>
+</body>
+</html>

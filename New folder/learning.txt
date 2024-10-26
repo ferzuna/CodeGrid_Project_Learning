@@ -1,0 +1,3 @@
+gsap.set untuk inisiasi value atau posisi
+properties stagger untuk mengurutkan satu2
+gsap.to(".star", {stagger:1, x:750, rotation:360, fill:"yellow", duration:3})
