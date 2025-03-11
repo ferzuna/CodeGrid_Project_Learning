@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
-    })
+    });
 
     gsap.ticker.lagSmoothing(0);
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.appendChild(measureContainer);
 
-    const serviceWidths = Array.from(serives).map((service) => {
+    const serviceWidths = Array.from(services).map((service) => {
         measureContainer.textContent = service.querySelector("p").textContent;
         return measureContainer.offsetWidth + 8;
     });
@@ -76,14 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     gsap.set(currentSplitText.lines, {
                         opacity: 0,
-                        y: -20,
+                        y: 20,
                     });
 
                     gsap.to(currentSplitText.lines, {
                         opacity: 1,
                         y: 0,
                         duration: 0.5,
-                        stagger: 0.3,
+                        stagger: 0.03,
                         ease: "power3.out",
                         onComplete: resolve,
                     });
